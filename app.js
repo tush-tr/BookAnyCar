@@ -7,9 +7,13 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static("public"));
+
 // TODO: Importing Routes
 const homeRoutes = require("./routes/home");
 const addCarRoutes = require("./routes/add-car");
+const carsListRoutes = require("./routes/cars");
+
+
 const data = [{
         car: "Alto",
         model: "2018",
@@ -23,9 +27,14 @@ const data = [{
 ]
 // Home Routes
 app.use("/", homeRoutes);
-// addcar routes -- take data from user of car 
-app.use("/addcar", addCarRoutes.route(data));
-data.push(addCarRoutes.resData)
+// addcar routes -- take data from user of car _POST
+app.use("/addcar", addCarRoutes(data));
+// Cars List Route -- showing data of cars
+app.use("/cars",carsListRoutes(data));
+
+// TODO: API
+app.use("/api/addcar",require("./routes/apipost")(data));
+app.use("/api/cars",require("./routes/apiget")(data));
 
 
 app.listen(3500,()=>{
