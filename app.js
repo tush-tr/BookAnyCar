@@ -7,12 +7,21 @@ app.use(express.static("public"));
 // TODO: Importing Routes
 const homeRoutes = require("./routes/home");
 const addCarRoutes = require("./routes/add-car");
-
-
+const data = [{
+        car: "Alto",
+        model: "2018",
+        fair: "$200"
+    },
+    {
+        car:"Swift",
+        model: "2015",
+        fair: "$400"
+    }
+]
 // Home Routes
-app.use("/",homeRoutes);
-app.use("/addcar",addCarRoutes);
-
+app.use("/", homeRoutes);
+// addcar routes -- take data from user of car 
+app.use("/addcar", addCarRoutes.route(data));
 
 
 
