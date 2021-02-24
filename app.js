@@ -1,7 +1,15 @@
 const express = require("express");
-const homeRoutes = require("./routes/home");
+const ejs = require("ejs");
 const app = express();
 const { static } = require("express");
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
+// TODO: Importing Routes
+const homeRoutes = require("./routes/home");
+
+
+
+
 
 // Home Routes
 app.use("/",homeRoutes);
