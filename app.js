@@ -6,15 +6,12 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 // TODO: Importing Routes
 const homeRoutes = require("./routes/home");
-
-
-
+const addCarRoutes = require("./routes/add-car");
 
 
 // Home Routes
 app.use("/",homeRoutes);
-
-
+app.use("/addcar",addCarRoutes);
 
 
 

@@ -1,31 +1,17 @@
-.navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-}
-.navbar-nav li{
-    font-size: 1.5rem;
-}
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
-}
-.navbar-nav #nav-book{
-    font-size: 1.5rem;
-    border: 2px solid #bba3a3;
-    background-color: #9c7a4c;
-    border-radius: 13px;
-}
-.navbar-nav #nav-book a{
+#nav-book{
+    padding-top: 4px;
+    font-size: 1.1rem;
+    padding-bottom: 4px;
+    font-weight: 700;
+    border: 2px solid #c5c7ca;
+    border-radius: 3px;
+    background-color: #15a588;
     color: white;
+    margin-right: 20px;
 }
-.navbar-default {
-    background-color: #e4dcdc;
+.nav-item{
+    text-align: center;
 }
-
 .footer-padding {
 	padding-bottom: 60px;
 }
