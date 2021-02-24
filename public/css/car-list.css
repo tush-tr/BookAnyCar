@@ -1,0 +1,40 @@
+.car-card{
+    width: 20%;
+    border: 2px solid;
+    text-align: center;
+    padding: 15px;
+}
+.car-list-container{
+    width: 100%;
+    display: flex;
+}
+.car-card>div>span{
+    margin-right: 5px;
+    float: left;
+    margin-left: 20px;
+}
+.car-card{
+    margin-top: 20px;
+    color: white;
+    background-color: #730c0c;;
+}
+.car-card>div{
+    background-color: #801414;;
+}
+.car-card .book-car{
+    background-color: #712929;
+    border: none;
+    margin-top: 10px;
+    color: white;
+    font-weight: 500;
+}
+form{
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+form>button{
+    margin-top: 30px;
+}
