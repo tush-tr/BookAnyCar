@@ -1,8 +1,11 @@
 const express = require("express");
 const ejs = require("ejs");
 const app = express();
+const bodyParser = require("body-parser");
 const { static } = require("express");
 app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(express.static("public"));
 // TODO: Importing Routes
 const homeRoutes = require("./routes/home");
@@ -22,7 +25,7 @@ const data = [{
 app.use("/", homeRoutes);
 // addcar routes -- take data from user of car 
 app.use("/addcar", addCarRoutes.route(data));
-
+data.push(addCarRoutes.resData)
 
 
 app.listen(3500,()=>{
