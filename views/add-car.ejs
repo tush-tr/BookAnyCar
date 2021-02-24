@@ -1,8 +1,20 @@
 <%- include('partials/header'); -%>
-
     <div class="home-intro">
-        <h2>Get Any Car on Rent</h2>
+        <h2>Give your car on rent and earn money</h2>
     </div>
-    
-    
+    <form action="" method="post">
+        <div class="form-group mb-3">
+            <label for="title">Car Details: </label>
+            <input class="form-control" type="text" name="car">
+        </div>
+        <div class="form-group">
+            <label for="post">Model Name: </label>
+            <input class="form-control" type="text" name="model">
+        </div>
+        <div class="form-group">
+            <label for="post">Fair price: </label>
+            <input class="form-control" type="text" name="fair">
+        </div>
+        <button type="submit" class="btn btn-primary">Add your Car</button>
+    </form>
  <%- include('partials/footer'); -%>
