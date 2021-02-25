@@ -1,15 +1,17 @@
 .car-card{
-    width: 25%;
+    width: 80%;
     border: 2px solid;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
     color: white;
-    background-color: #730c0c;;
+    background-color: #15a588;
 }
 .car-list-container{
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .car-card>div>span{
     margin-right: 5px;
@@ -17,7 +19,8 @@
     margin-left: 20px;
 }
 .car-card>div{
-    background-color: #801414;;
+    background-color: #095848;
+    padding: 30px;
 }
 .car-card .book-car{
     background-color: #712929;
@@ -37,13 +40,17 @@ form>button{
     margin-top: 30px;
 }
 .car-img{
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 300px;
+    margin-left: 100px;
+    float: right;
 }
 .car-info{
     display: flex;
+    justify-content: center;
 }
 .car-img>img{
     height: 90%;
     width: 90%;
+    
 }
