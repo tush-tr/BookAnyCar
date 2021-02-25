@@ -17,7 +17,8 @@ module.exports = (data) => {
             const imagePath = path.join(__dirname, '../public/car-images');
             const fileUpload = new Resize(imagePath);
             if (!req.file) {
-                res.status(401).json({ error: 'Please provide an image' });
+                data.push(req.body);
+                res.redirect("/");
             }
             const filename = await fileUpload.save(req.file.buffer);
             let addData = new CarData(req.body.car,req.body.model, req.body.fair,filename);
