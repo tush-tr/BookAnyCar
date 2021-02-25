@@ -2,7 +2,7 @@
     <div class="home-intro">
         <h2>Give your car on rent and earn money</h2>
     </div>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <div class="form-group mb-3">
             <label for="title">Car Details: </label>
             <input class="form-control" type="text" name="car">
@@ -15,6 +15,7 @@
             <label for="post">Fair price: </label>
             <input class="form-control" type="text" name="fair">
         </div>
+        <input type="file" name="image" /><br /><br />
         <button type="submit" class="btn btn-primary">Add your Car</button>
     </form>
  <%- include('partials/footer'); -%>
