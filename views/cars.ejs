@@ -5,20 +5,28 @@
 </div>
 <div class="car-list-container">
     <% carList.forEach((car)=>{ %>
-    <div class="car-card">  
-        <div class="car-name">
-            <span>Car Details: </span>
-            <%= car.car %>
+    <div class="car-card">
+        <div class="car-info">
+            <div class="car-about-sec">
+            <div class="car-name">
+                <span>Car Details: </span>
+                <%= car.car %>
+            </div>
+            <div class="car-model">
+                <span>Car Model: </span>
+                <%= car.model %>
+            </div>
+            <div class="car-fair">
+                <span>Car fair Price: </span>
+                <%= car.fair %>
+            </div>  
+            </div>
+
+            <div class="car-img">
+                <img src="/car-images/<%= car.img %>">
+            </div>
         </div>
-        <div class="car-model">
-            <span>Car Model: </span>
-            <%= car.model %>
-        </div>
-        <div class="car-fair">
-            <span>Car fair Price: </span>
-            <%= car.fair %>
-        </div>
-        <button class="book-car" >Book</button>
+        <button class="book-car">Book</button>
     </div>
     <% }) %>
 </div>
