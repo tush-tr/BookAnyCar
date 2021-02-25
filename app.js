@@ -20,7 +20,7 @@ app.use(express.static("public"));
 const homeRoutes = require("./routes/home");
 const addCarRoutes = require("./routes/add-car");
 const carsListRoutes = require("./routes/cars");
-
+const aboutRoute = require("./routes/about");
 
 
 // Initializing array for data of cars
@@ -36,15 +36,16 @@ const data = [{
     }
 ]
 
-
-
-
 // Home Routes
 app.use("/", homeRoutes);
 // addcar routes -- take data from user of car _POST
 app.use("/addcar", addCarRoutes(data));
 // Cars List Route -- showing data of cars
 app.use("/cars",carsListRoutes(data));
+app.use("/about",aboutRoute())
+
+
+
 
 // TODO: API
 app.use("/api/addcar",require("./routes/apipost")(data));
