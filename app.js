@@ -4,9 +4,11 @@ const ejs = require("ejs"); // template engine
 const app = express(); 
 const bodyParser = require("body-parser"); // for parsing request bodies
 const { static } = require("express");     // static files handling
+const path = require('path');
 
 // TODO: Importing Middlewares
-
+const Resize = require('./middleware/resize');
+const upload = require('./middleware/uploadmiddleware');
 
 // TODO: Express specific stuff
 app.set('view engine', 'ejs');  
