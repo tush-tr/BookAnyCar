@@ -26,7 +26,8 @@ const aboutRoute = require("./routes/about");
 
 
 // TODO: MongoDB Specific stuff
-
+// Connect to the mongodb server
+mongoose.connect("mongodb+srv://:<password>@cluster0.f729m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/todolistdb",{useNewUrlParser: true});
 
 
 
