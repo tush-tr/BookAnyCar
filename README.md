@@ -1,12 +1,18 @@
 # Car Rental System Application
+
+
+
 A car rental System Project using Node js.
 
-### Technologies Used
-<li>Node js
-<li>Express js
-<li>JavaScript
-<li>EJS
-<li>CSS
+## Main Technologies and Libraries
+<li><a href="https://nodejs.org/">Node js</a>
+<li><a href="https://expressjs.com/">Express js</a>
+<li><a href="https://ejs.co/">EJS</a>
+<li><a href="https://www.mongodb.com/">MongoDB</a>
+<li><a href="https://mongoosejs.com/">Mongoose</a>
+<li><a href="https://www.npmjs.com/package/multer">multer</a>
+<li><a href="https://www.npmjs.com/package/sharp">sharp</a>
+<li><a href="https://www.npmjs.com/package/uuid">uuidv4</a>
 
 
 
