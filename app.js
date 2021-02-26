@@ -23,6 +23,12 @@ const carsListRoutes = require("./routes/cars");
 const aboutRoute = require("./routes/about");
 
 
+
+// TODO: MongoDB Specific stuff
+
+
+
+
 // Initializing array for data of cars
 const data = [{
         car: "Alto",
