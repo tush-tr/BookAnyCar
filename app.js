@@ -27,7 +27,7 @@ const aboutRoute = require("./routes/about");
 
 // TODO: MongoDB Specific stuff
 // Connect to the mongodb server
-mongoose.connect("mongodb+srv://admin-tush:12@tush$mongo@cluster0.f729m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/carrentdb",{useNewUrlParser: true});
+mongoose.connect("mongodb+srv://<USER-NAME>:<PASSWORD>@cluster0.f729m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/carrentdb",{useNewUrlParser: true});
 // Mongoose schema for cars list documents
 const carlistSchema = new mongoose.Schema({
     car: String,
