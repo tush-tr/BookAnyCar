@@ -5,7 +5,8 @@
     padding: 15px;
     margin-top: 20px;
     color: white;
-    background-color: #15a588;
+    background-color: #d5d9dc;
+    border-radius: 10px;
 }
 .car-list-container{
     width: 100%;
@@ -19,31 +20,31 @@
     margin-left: 20px;
 }
 .car-card>div{
-    background-color: #095848;
+    background-color: #697986;
     padding: 30px;
+    border-radius: 40px;
 }
 .car-card .book-car{
-    background-color: #712929;
+    background-color: #284256;
     border: none;
     margin-top: 10px;
     color: white;
+    font-size: 1.4rem;
     font-weight: 500;
+    padding: 8px 20px 8px 20px;
+    border-radius: 10px;
 }
-form{
-    margin-top: 40px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+.car-card .book-car:hover{
+    background-color: #3c6c90;
 }
-form>button{
-    margin-top: 30px;
-}
+
 .car-img{
-    height: 200px;
+    height: 300px;
     width: 300px;
     margin-left: 100px;
-    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .car-info{
     display: flex;
@@ -51,6 +52,27 @@ form>button{
 }
 .car-img>img{
     height: 90%;
-    width: 90%;
+    margin-top: 45px;
+    width: 100%;
+    margin-left: 10px;
     
+}
+.car-about-sec{
+    margin-top: 100px;
+    font-size: 1.5rem;
+}
+/* FORM */
+
+form{
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #9fa9b3;
+    padding: 20px;
+    font-size: 1.3rem;
+}
+form>button{
+    margin-top: 30px;
 }
