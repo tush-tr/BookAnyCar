@@ -5,6 +5,7 @@ const app = express();
 const bodyParser = require("body-parser"); // for parsing request bodies
 const { static } = require("express");     // static files handling
 const path = require('path');
+const mongoose = require("mongoose");
 
 // TODO: Importing Middlewares
 const Resize = require('./middleware/resize');
