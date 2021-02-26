@@ -27,31 +27,53 @@ const aboutRoute = require("./routes/about");
 
 // TODO: MongoDB Specific stuff
 // Connect to the mongodb server
-mongoose.connect("mongodb+srv://:<password>@cluster0.f729m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/todolistdb",{useNewUrlParser: true});
+mongoose.connect("mongodb+srv://admin-tush:12@tush$mongo@cluster0.f729m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/carrentdb",{useNewUrlParser: true});
+// Mongoose schema for cars list documents
+const carlistSchema = new mongoose.Schema({
+    car: String,
+    model: String,
+    fair: String
+})
+
+// Create a model
+const Car = mongoose.model('Car',carlistSchema);
 
 
 
-// Initializing array for data of cars
-const data = [{
-        car: "Alto",
-        model: "2018",
-        fair: "$200"
-    },
-    {
-        car:"Swift",
-        model: "2015",
-        fair: "$400"
+
+
+// TODO:_______________ Demo Data for testing_________
+let car1 = new Car({
+    car: "Alto",
+    model: "2018",
+    fair: "$200",
+    img: "demo-img1.jpg"
+})
+let car2 = new Car({
+    car:"Swift",
+    model: "2015",
+    fair: "$400",
+    img: "demo-img2.jpg"
+})
+const demoCarArray = [car1,car2];
+// Insert these demo items to the database
+Car.insertMany(demoCarArray,(err)=>{
+    if(err){
+        console.log(err);
+    }else{
+        console.log("Success");
     }
-]
+})
+// __________________________________________________
+
 
 // Home Routes
 app.use("/", homeRoutes);
 // addcar routes -- take data from user of car _POST
-app.use("/addcar", addCarRoutes(data));
+app.use("/addcar", addCarRoutes(Car));
 // Cars List Route -- showing data of cars
-app.use("/cars",carsListRoutes(data));
+app.use("/cars",carsListRoutes(Car));
 app.use("/about",aboutRoute())
-
 
 
 
