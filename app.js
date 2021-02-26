@@ -27,12 +27,13 @@ const aboutRoute = require("./routes/about");
 
 // TODO: MongoDB Specific stuff
 // Connect to the mongodb server
-mongoose.connect("mongodb+srv://<USER-NAME>:<PASSWORD>@cluster0.f729m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/carrentdb",{useNewUrlParser: true});
+mongoose.connect("mongodb+srv://<USER-NAME>:<PASSWORD>@cluster0.f729m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{useNewUrlParser: true});
 // Mongoose schema for cars list documents
 const carlistSchema = new mongoose.Schema({
     car: String,
     model: String,
-    fair: String
+    fair: String,
+    img: String
 })
 
 // Create a model
@@ -57,13 +58,13 @@ let car2 = new Car({
 })
 const demoCarArray = [car1,car2];
 // Insert these demo items to the database
-Car.insertMany(demoCarArray,(err)=>{
-    if(err){
-        console.log(err);
-    }else{
-        console.log("Success");
-    }
-})
+// Car.insertMany(demoCarArray,(err)=>{
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log("Success");
+//     }
+// })
 // __________________________________________________
 
 
@@ -78,8 +79,8 @@ app.use("/about",aboutRoute())
 
 
 // TODO: API
-app.use("/api/addcar",require("./routes/apipost")(data));
-app.use("/api/cars",require("./routes/apiget")(data));
+app.use("/api/addcar",require("./routes/apipost")(Car));
+app.use("/api/cars",require("./routes/apiget")(Car));
 
 
 
