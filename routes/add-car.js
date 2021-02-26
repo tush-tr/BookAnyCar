@@ -3,9 +3,9 @@ const path = require('path');
 const Resize = require('../middleware/resize');
 const upload = require('../middleware/uploadmiddleware');
 
-function CarData(car, model, fair, img) { this.car = car; this.model = model; this.fair = fair; this.img = img };
+// function CarData(car, model, fair, img) { this.car = car; this.model = model; this.fair = fair; this.img = img };
 
-module.exports = (data) => {
+module.exports = (Car) => {
     'use strict';
     const express = require("express");
     var addCarRoutes = express.Router();
@@ -17,12 +17,18 @@ module.exports = (data) => {
             const imagePath = path.join(__dirname, '../public/car-images');
             const fileUpload = new Resize(imagePath);
             if (!req.file) {
-                data.push(req.body);
                 res.redirect("/");
             }
             const filename = await fileUpload.save(req.file.buffer);
-            let addData = new CarData(req.body.car,req.body.model, req.body.fair,filename);
-            data.push(addData);
+            // New document for adding to mongodb
+            let dataForAdd = new Car(
+                {
+                    car: req.body.car,
+                    model: req.body.model,
+                    fair: req.body.fair,
+                    img: filename
+                })
+            dataForAdd.save()           
             res.redirect("/");
         });
     return addCarRoutes;

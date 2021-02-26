@@ -1,11 +1,18 @@
-module.exports=(data)=> {
+module.exports = (Car) => {
     'use strict';
-	const express = require("express");
+    const express = require("express");
     var addCarRoutes = express.Router();
     addCarRoutes.route("/")
-    .post((req,res)=>{
-		console.log(req.body);
-        data.push(req.body);
-    })   
+        .post((req, res) => {
+            let dataForAdd = new Car(
+                {
+                    car: req.body.car,
+                    model: req.body.model,
+                    fair: req.body.fair,
+                    img: filename
+                })
+            dataForAdd.save() 
+            
+        })
     return addCarRoutes;
 };
