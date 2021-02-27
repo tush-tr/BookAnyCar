@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 #nav-book{
     padding-top: 4px;
     font-size: 1.1rem;
@@ -28,8 +29,6 @@
 .footer-copyright{
     padding-top: 20px;
 }
-
-
 .footer p {
 	margin-top: 25px;
 	font-size: 12px;
@@ -37,4 +36,44 @@
 }
 .container{
     text-align: center;
+}
+.home-intro{
+    margin: 20px;
+    color: #505056;
+    background-color: #fef1f440;
+    border-radius: 38px;
+}
+.home-intro>h2{
+    font-size: 2.6rem;
+}
+.home-section-main{
+    height: 400px;
+    margin-bottom: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+.home-section-main::before{
+    content: "";
+    background: url("https://www.nerdwallet.com/assets/blog/wp-content/uploads/2018/01/why-kei-51455-1440x864.jpg") repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .95;
+    top: 0px;
+    left: 0px;
+    filter: blur(3px);
+    -webkit-filter: blur(4px);
+}
+.home-section-main>div{
+    margin-top: 100px;
+}
+.home-section-main>div>h1{
+    font-family: 'Anton', sans-serif;
+}
+.home-section-main>div>p{
+    font-size: 1.3rem;
 }
