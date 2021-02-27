@@ -21,28 +21,44 @@ $ npm start
 ```
 
 ## Functionalities
-<li>Home Page for introduction
+### <li>Home Page for introduction
 
 ```Link
 http://localhost:3500/
 ```
-<li>Cars list page for select car to book
+<img src="previews/home-page.gif">
+
+### <li>Cars list page for select car to book
 
 ```Link
 http://localhost:3500/cars
 ```
-<li>Car Add page for adding car for rent
+<img src="previews/car-list-page.gif">
+
+### <li>Car Add page for adding car for rent
 
 ```Link
 http://localhost:3500/addcar
 ```
-<li>About Page
+<img src="previews/add-car-page.gif">
+
+
+### <li>About Page
 
 ```Link
 http://localhost:3500/about
 ```
 
 <img src="previews/about-page.gif">
+
+
+## All Pages are responsive
+<div align=center>
+
+<img src="previews/res1.gif" height="300em" /><img src="previews/res2.gif" height="300em" /><img src="previews/res3.gif" height="300em" /><img src="previews/res4.gif" height="300em" />
+
+</div>
+
 
 
 ## Database Configuration
@@ -102,6 +118,12 @@ curl -i -H "Content-Type: application/json" -X POST -d '{"car": "Maruti","model"
 
 <img src="previews/rent-2.gif">
 
+### Preview 3
+<li>Added content to every page
+<li>Added stylesheets for every page
+<li>Made every page responsive
+
+<img src="previews/home-page.gif">
 
 ## Author
 >Tushar Rajpoot<br>
