@@ -7,6 +7,8 @@ const { static } = require("express");     // static files handling
 const path = require('path');
 const mongoose = require("mongoose");
 
+// Define global variables
+const port = process.env.PORT || 3500;
 // TODO: Importing Middlewares
 const Resize = require('./middleware/resize');
 const upload = require('./middleware/uploadmiddleware');
@@ -84,6 +86,7 @@ app.use("/api/cars",require("./routes/apiget")(Car));
 
 
 
-app.listen(3500,()=>{
+// Starting the server
+app.listen(port,()=>{
     console.log("Server is running on port 3500");
 })
