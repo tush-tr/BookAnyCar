@@ -62,7 +62,7 @@ mongoose.connect("mongodb+srv://<USER-NAME>:<PASSWORD>@cluster0.f729m.mongodb.ne
 <li><a href="https://www.npmjs.com/package/multer">multer</a>
 <li><a href="https://www.npmjs.com/package/sharp">sharp</a>
 <li><a href="https://www.npmjs.com/package/uuid">uuidv4</a>
-
+<li><a href="https://www.npmjs.com/package/dotenv">dotenv</a>
 
 
 
