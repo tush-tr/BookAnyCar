@@ -64,7 +64,10 @@
         height: auto;
     }
     .about-section-card{
-        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
         width: 100%;
     }
     .about-heading{
