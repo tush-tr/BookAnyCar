@@ -1,4 +1,7 @@
 // TODO: Import modules
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config()
+}
 const express = require("express"); 
 const ejs = require("ejs"); // template engine
 const app = express(); 
@@ -9,6 +12,8 @@ const mongoose = require("mongoose");
 
 // Define global variables
 const port = process.env.PORT || 3500;
+const mongoAdmin = process.env.mongoUser;
+const mongoPassword = process.env.mongoPass;
 // TODO: Importing Middlewares
 const Resize = require('./middleware/resize');
 const upload = require('./middleware/uploadmiddleware');
@@ -29,7 +34,7 @@ const aboutRoute = require("./routes/about");
 
 // TODO: MongoDB Specific stuff
 // Connect to the mongodb server
-mongoose.connect("mongodb+srv://<USER-NAME>:<PASSWORD>@cluster0.f729m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{useNewUrlParser: true});
+mongoose.connect(`mongodb+srv://${mongoAdmin}:${mongoPassword}@cluster0.f729m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{useNewUrlParser: true});
 // Mongoose schema for cars list documents
 const carlistSchema = new mongoose.Schema({
     car: String,
@@ -76,6 +81,7 @@ app.use("/", homeRoutes);
 app.use("/addcar", addCarRoutes(Car));
 // Cars List Route -- showing data of cars
 app.use("/cars",carsListRoutes(Car));
+// route for about page
 app.use("/about",aboutRoute())
 
 
