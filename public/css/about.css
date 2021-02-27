@@ -15,7 +15,7 @@
 }
 .about-section-card-container{
     display: flex;
-    height: 30rem;
+    height: 34rem;
 
 }
 .about-section-card{
@@ -23,12 +23,34 @@
     background-color: #eff0f1;
     margin: 10px;
     width: 33%;
+    border: 2px solid #cacdd0;
+    border-radius: 10px;
 }
 .about-section-card>img{
     width: 100%;
     height: 50%;
     margin-bottom: 10px;
 }
+/* ___________________ */
+.why-section-main{
+    text-align: left;
+}
+.why-card-container{
+    display: flex;
+}
+.why-card{
+    display: flex;
+    width: 50%;
+}
+.why-card>img{
+    width: 30%;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+
 @media (min-width: 200px) and (max-width: 600px){
     .about-section-card-container{
         flex-direction: column;
