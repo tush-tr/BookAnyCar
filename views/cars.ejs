@@ -8,10 +8,13 @@
 
 <div class="car-list-container">
     <% carList.forEach((car)=>{ %>
-        
+
     <div class="car-card">
-        <div class="car-info">
-            <div class="car-about-sec">
+        <div class="car-img">
+            <img src="/car-images/<%= car.img %>">
+        </div>
+
+        <div class="car-about-sec">
             <div class="car-name">
                 <span>Car Details: </span>
                 <%= car.car %>
@@ -23,14 +26,12 @@
             <div class="car-fair">
                 <span>Car fair Price: </span>
                 <%= car.fair %>
-            </div>  
             </div>
-
-            <div class="car-img">
-                <img src="/car-images/<%= car.img %>">
-            </div>
+            <button class="book-car">Book Now</button>
         </div>
-        <button class="book-car">Book Now</button>
+
+
+
     </div>
 
     <% }) %>
