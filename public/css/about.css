@@ -34,6 +34,8 @@
 /* ___________________ */
 .why-section-main{
     text-align: left;
+    margin-top: 20px;
+    padding: 10px;
 }
 .why-card-container{
     display: flex;
@@ -41,6 +43,11 @@
 .why-card{
     display: flex;
     width: 50%;
+    background-color: #cafbf1;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #94d0c3;
+    border-radius: 12px;
 }
 .why-card>img{
     width: 30%;
@@ -62,5 +69,15 @@
     }
     .about-heading{
         margin-top: 20px;
+    }
+    .why-card-container {
+        flex-direction: column;
+    }
+    .why-card {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+    .slide-items {
+        flex-direction: column;
     }
 }
