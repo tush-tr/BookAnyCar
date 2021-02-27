@@ -42,6 +42,9 @@ http://localhost:3500/addcar
 http://localhost:3500/about
 ```
 
+<img src="previews/about-page.gif">
+
+
 ## Database Configuration
 I used my mongodb atlas server for this project. You can use your local server of mongodb or you can use your own atlas server.
 ```javascript
