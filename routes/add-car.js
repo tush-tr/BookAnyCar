@@ -11,7 +11,7 @@ module.exports = (Car) => {
     var addCarRoutes = express.Router();
     addCarRoutes.route("/")
         .get((req, res) => {
-            res.render("add-car")
+            res.render("user");
         })
         .post(upload.single('image'), async function (req, res) {
             const imagePath = path.join(__dirname, '../public/car-images');
