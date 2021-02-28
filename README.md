@@ -1,6 +1,6 @@
-# Car Rental System Application
+<h1 align=center> Car Rental System Web Application</h1>
 
-<img src="previews/rent-2.gif">
+<img src="previews/full1.gif">
 <p align=center>A car rental System Project using Node js.</p>
 
 ## Description
@@ -42,6 +42,8 @@ http://localhost:3500/addcar
 ```
 <img src="previews/add-car-page.gif">
 
+### <li> User Validation with database encryption
+<img src="previews/user.gif">
 
 ### <li>About Page
 
@@ -55,7 +57,7 @@ http://localhost:3500/about
 ## All Pages are responsive
 <div align=center>
 
-<img src="previews/res1.gif" height="300em" /><img src="previews/res2.gif" height="300em" /><img src="previews/res3.gif" height="300em" /><img src="previews/res4.gif" height="300em" />
+<img src="previews/res1.gif" height="300em" /><img src="previews/res2.gif" height="300em" /><img src="previews/res3.gif" height="300em" /><img src="previews/res4.gif" height="300em" /><img src="previews/res5.gif" height="300em" />
 
 </div>
 
@@ -75,11 +77,12 @@ mongoose.connect("mongodb+srv://<USER-NAME>:<PASSWORD>@cluster0.f729m.mongodb.ne
 <li><a href="https://ejs.co/">EJS</a>
 <li><a href="https://www.mongodb.com/">MongoDB</a>
 <li><a href="https://mongoosejs.com/">Mongoose</a>
+<li><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a>
 <li><a href="https://www.npmjs.com/package/multer">multer</a>
 <li><a href="https://www.npmjs.com/package/sharp">sharp</a>
 <li><a href="https://www.npmjs.com/package/uuid">uuidv4</a>
 <li><a href="https://www.npmjs.com/package/dotenv">dotenv</a>
-
+<li><a href="https://www.npmjs.com/package/mongoose-encryption">mongoose-encryption</a>
 
 
 
@@ -108,22 +111,35 @@ curl -i -H "Content-Type: application/json" -X POST -d '{"car": "Maruti","model"
  ### Preview 1
  <li>Implemented All routes
  <li>Implemented rest apis
- <li>In this phase no database used
+ <li>In this phase no database used<br><br>
+
 <img src="previews/rent-1.gif">
 
 ### Preview 2
 <li>Implemented image upload functionality
 <li>Implemented database server to the application(MongoDB)
-<li>Improved UI
+<li>Improved UI<br><br>
+
 
 <img src="previews/rent-2.gif">
 
 ### Preview 3
 <li>Added content to every page
 <li>Added stylesheets for every page
-<li>Made every page responsive
+<li>Made every page responsive<br><br>
+
 
 <img src="previews/home-page.gif">
+
+
+### Preview 4
+<li>Implemented User validation
+<li>Implemented database encryption<br><br>
+
+<img src="previews/user.gif">
+
+
+
 
 ## Author
 >Tushar Rajpoot<br>
