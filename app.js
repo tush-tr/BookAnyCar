@@ -43,14 +43,19 @@ const carlistSchema = new mongoose.Schema({
     img: String
 })
 
+const userSchema = new mongoose.Schema({
+    user: String,
+    password: String
+})
+
 // Create a model
 const Car = mongoose.model('Car',carlistSchema);
+const User = mongoose.model("User", userSchema);
 
 
 
 
-
-// TODO:_______________ Demo Data for testing_________
+// TODO:_______________ Demo Data for testing__________
 let car1 = new Car({
     car: "Alto",
     model: "2018",
@@ -64,7 +69,7 @@ let car2 = new Car({
     img: "demo-img2.jpg"
 })
 const demoCarArray = [car1,car2];
-// Insert these demo items to the database
+// Insert these demo items to the database 
 // Car.insertMany(demoCarArray,(err)=>{
 //     if(err){
 //         console.log(err);
@@ -72,23 +77,30 @@ const demoCarArray = [car1,car2];
 //         console.log("Success");
 //     }
 // })
-// __________________________________________________
-
+// ________________________________________
 
 // Home Routes
 app.use("/", homeRoutes);
-// addcar routes -- take data from user of car _POST
+// Addcar routes -- take data from user of car _POST
 app.use("/addcar", addCarRoutes(Car));
 // Cars List Route -- showing data of cars
 app.use("/cars",carsListRoutes(Car));
-// route for about page
+// Route for about page
 app.use("/about",aboutRoute())
+// Route for users page
+
+// Route for user registration
+app.use("/register",require("./routes/register")(User))
+// Route for login page
+app.use("/login",require("./routes/login")(User));
 
 
 
-// TODO: API
+
+// TODO: API 
 app.use("/api/addcar",require("./routes/apipost")(Car));
 app.use("/api/cars",require("./routes/apiget")(Car));
+
 
 
 
