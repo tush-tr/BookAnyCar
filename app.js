@@ -9,11 +9,13 @@ const bodyParser = require("body-parser"); // for parsing request bodies
 const { static } = require("express");     // static files handling
 const path = require('path');
 const mongoose = require("mongoose");
+const encrypt = require("mongoose-encryption");
 
 // Define global variables
 const port = process.env.PORT || 3500;
 const mongoAdmin = process.env.mongoUser;
 const mongoPassword = process.env.mongoPass;
+const encryptKey = process.env.encryptKey;
 // TODO: Importing Middlewares
 const Resize = require('./middleware/resize');
 const upload = require('./middleware/uploadmiddleware');
@@ -47,6 +49,10 @@ const userSchema = new mongoose.Schema({
     user: String,
     password: String
 })
+
+// TODO: Encrypting the database
+userSchema.plugin(encrypt, {secret:encryptKey ,encryptedFields: ['password']});
+
 
 // Create a model
 const Car = mongoose.model('Car',carlistSchema);
