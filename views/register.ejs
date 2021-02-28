@@ -1,5 +1,5 @@
 <%- include('partials/header'); -%>
-<form action="/register" method="POST">
+<form name="registerForm" action="/register" method="POST" onsubmit="return validateForm()" required>
     <div class="form-group">
         <label for="email">Email</label>
         <input type="email" class="form-control" name="username">
@@ -13,5 +13,6 @@
     <a href="/login" class="btn btn-dark">Login</a>
 </form>
 
+<%- include('partials/script');-%>
 <%- include('partials/slide');-%>
 <%- include('partials/footer'); -%>
