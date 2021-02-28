@@ -57,7 +57,7 @@ http://localhost:3500/about
 ## All Pages are responsive
 
 
-<img src="previews/res1.gif" height="300em" /><img src="previews/res2.gif" height="300em" /><img src="previews/res3.gif" height="300em" /><img src="previews/res4.gif" height="300em" /><img src="previews/res5.gif" height="300em" />
+<img src="previews/res1.gif" height="300em" width="160em" /><img src="previews/res2.gif" height="300em" width="160em" /><img src="previews/res3.gif" height="300em" width="160em" /><img src="previews/res4.gif" height="300em" width="160em" /><img src="previews/res5.gif" height="300em" width="160em" />
 
 
 
