@@ -55,11 +55,11 @@ http://localhost:3500/about
 
 
 ## All Pages are responsive
-<div align=center>
+
 
 <img src="previews/res1.gif" height="300em" /><img src="previews/res2.gif" height="300em" /><img src="previews/res3.gif" height="300em" /><img src="previews/res4.gif" height="300em" /><img src="previews/res5.gif" height="300em" />
 
-</div>
+
 
 
 
