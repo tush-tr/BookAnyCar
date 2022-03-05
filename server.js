@@ -1,12 +1,18 @@
 const express = require("express");
 const app = express();
-const dotenv = require("dotenv");
 const cors = require("cors");
 
-const port = 3000 || process.env.PORT
+const dbConfig = require("./util/database");
 
+const port = 3000 || process.env.PORT;
+app.use(cors())
+app.use(express.json())
+const {router:adminRouter,adminJS} = require("./routes/admin-panel") 
+const carsRouter = require("./routes/cars")
 
-
-app.listen(port,()=>{
-    console.log("Server is up and running")
-})
+app.use(adminJS.options.rootPath,adminRouter)
+app.use("/api/v1",carsRouter)
+dbConfig();
+app.listen(port, () => {
+  console.log("Server is up and running");
+});
