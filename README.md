@@ -1,146 +1,70 @@
-<h1 align=center> Car Rental System Web Application</h1>
+# Getting Started with Create React App
 
-<img src="previews/full1.gif">
-<p align=center>A car rental System Project using Node js.</p>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Description
-<p>
-You all well known about ola , uber applications which provides car renting services. I used same idea with some of another functionalities. I started working on this project from 24 feb 2021. Building a full stack application always takes a lot of time and effort. The experienced I gained while building this project was amazing, I learned a lot, I experienced how to manage things we don't know about and learn quickly and implement ourselves. 
-</p>
+## Available Scripts
 
-## Installation
-Use these steps to install and run this application
-```Bash
-$ git clone https://github.com/tush-tr/car-rental-system
-```
-```Bash
-$ npm install
-```
-```Bash
-$ npm start
-```
+In the project directory, you can run:
 
-## Functionalities
-### <li>Home Page for introduction
+### `npm start`
 
-```Link
-http://localhost:3500/
-```
-<img src="previews/home-page.gif">
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### <li>Cars list page for select car to book
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-```Link
-http://localhost:3500/cars
-```
-<img src="previews/car-list-page.gif">
+### `npm test`
 
-### <li>Car Add page for adding car for rent
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```Link
-http://localhost:3500/addcar
-```
-<img src="previews/add-car-page.gif">
+### `npm run build`
 
-### <li> User Validation with database encryption
-<img src="previews/user.gif">
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### <li>About Page
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```Link
-http://localhost:3500/about
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<img src="previews/about-page.gif">
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## All Pages are responsive
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-<img src="previews/res1.gif" height="300em" width="160em" /><img src="previews/res2.gif" height="300em" width="160em" /><img src="previews/res3.gif" height="300em" width="160em" /><img src="previews/res4.gif" height="300em" width="160em" /><img src="previews/res5.gif" height="300em" width="160em" />
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-## Database Configuration
-I used my mongodb atlas server for this project. You can use your local server of mongodb or you can use your own atlas server.
-```javascript
-mongoose.connect("mongodb+srv://<USER-NAME>:<PASSWORD>@cluster0.f729m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{useNewUrlParser: true});
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## Main Technologies and Libraries
-<li><a href="https://nodejs.org/">Node js</a>
-<li><a href="https://expressjs.com/">Express js</a>
-<li><a href="https://ejs.co/">EJS</a>
-<li><a href="https://www.mongodb.com/">MongoDB</a>
-<li><a href="https://mongoosejs.com/">Mongoose</a>
-<li><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a>
-<li><a href="https://www.npmjs.com/package/multer">multer</a>
-<li><a href="https://www.npmjs.com/package/sharp">sharp</a>
-<li><a href="https://www.npmjs.com/package/uuid">uuidv4</a>
-<li><a href="https://www.npmjs.com/package/dotenv">dotenv</a>
-<li><a href="https://www.npmjs.com/package/mongoose-encryption">mongoose-encryption</a>
+### Making a Progressive Web App
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
+### Advanced Configuration
 
-## Restful API
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-<li>Restful APIs with other routes for handling data with Get and Post functionalities.
+### Deployment
 
-<br>GET
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-```Link
-http://localhost:3500/api/cars
-```
+### `npm run build` fails to minify
 
-POST
-```Link
-http://localhost:3500/api/addcar
-```
-
-### Posting request to API
-
-```Bash
-curl -i -H "Content-Type: application/json" -X POST -d '{"car": "Maruti","model": "2018","fair": "$5000"}' http://localhost:3500/addcar
-```
-
-## Preview of  development phases of the application
- ### Preview 1
- <li>Implemented All routes
- <li>Implemented rest apis
- <li>In this phase no database used<br><br>
-
-<img src="previews/rent-1.gif">
-
-### Preview 2
-<li>Implemented image upload functionality
-<li>Implemented database server to the application(MongoDB)
-<li>Improved UI<br><br>
-
-
-<img src="previews/rent-2.gif">
-
-### Preview 3
-<li>Added content to every page
-<li>Added stylesheets for every page
-<li>Made every page responsive<br><br>
-
-
-<img src="previews/home-page.gif">
-
-
-### Preview 4
-<li>Implemented User validation
-<li>Implemented database encryption<br><br>
-
-<img src="previews/user.gif">
-
-
-
-
-## Author
->Tushar Rajpoot<br>
-> <a href="https://tush-tr.github.io/">tush-tr.github.io</a>
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
