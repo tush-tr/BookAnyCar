@@ -1,0 +1,16 @@
+@media (min-width: 200px) and (max-width: 600px) {
+  .slide-items {
+    flex-direction: column;
+  }
+}
+#introslide {
+  text-align: left;
+}
+.slide-items {
+  display: flex;
+}
+.slide-items > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

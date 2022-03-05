@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.nav-item{
+    text-align: center;
+}
+#nav-book{
+    padding-top: 4px;
+    font-size: 1.1rem;
+    padding-bottom: 4px;
+    font-weight: 700;
+    border: 2px solid #c5c7ca;
+    border-radius: 3px;
+    background-color: #15a588;
+    color: white;
+    margin-right: 20px;
+}

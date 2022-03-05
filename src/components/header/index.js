@@ -1,3 +1,4 @@
+import './style.css'
 const Header = () => {
   return (
     <nav
@@ -45,3 +46,4 @@ const Header = () => {
     </nav>
   );
 };
+export default Header;

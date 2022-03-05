@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+.about-heading{
+    background-color: antiquewhite;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+.about-main-section{
+    text-align: initial;
+    margin-top: 50px;
+
+}
+.about-section-para{
+    font-size: 1.2rem;
+}
+.about-section-card-container{
+    display: flex;
+    height: 34rem;
+
+}
+.about-section-card{
+    padding: 20px;
+    background-color: #eff0f1;
+    margin: 10px;
+    width: 33%;
+    border: 2px solid #cacdd0;
+    border-radius: 10px;
+}
+.about-section-card>img{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+}
+@media (min-width: 200px) and (max-width: 600px){
+    .about-section-card-container{
+        flex-direction: column;
+        height: auto;
+    }
+    .about-section-card{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .about-heading{
+        margin-top: 20px;
+    }
+}
