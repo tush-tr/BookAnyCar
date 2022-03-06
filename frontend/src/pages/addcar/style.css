@@ -1,4 +1,4 @@
-form {
+/* form {
   margin-top: 40px;
   align-items: center;
   justify-content: center;
@@ -19,19 +19,19 @@ form > button {
 }
 label {
   width: 180px;
-}
+} */
 @media (min-width: 200px) and (max-width: 600px) {
-  .form-group {
+  /* .form-group {
     flex-direction: column;
     width: 100%;
-  }
+  } */
   .home-intro > h2 {
     font-size: 1.6rem;
   }
-  #upload-file {
+  /* #upload-file {
     width: 100%;
   }
   form {
     padding: 40px 10px 40px 10px;
-  }
+  } */
 }
