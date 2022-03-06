@@ -1,0 +1,38 @@
+name: Frontend Deploy 
+on:
+  push:
+    branches:
+      - "dev"
+# env:
+#   REACT_APP_APIURL: ${{secrets.REACT_APP_APIURL}}
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+        
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      # - name: Pass env
+      #   run: echo "REACT_APP_APIURL=$REACT_APP_APIURL" >> .env.production.local
+      #   working-directory: ./frontend
+        
+      - name: Install Packages
+        run: npm ci
+        working-directory: ./frontend
+      - name: Build
+        run: npm run build
+        working-directory: ./frontend
+
+      - run: ls
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: frontend/build
