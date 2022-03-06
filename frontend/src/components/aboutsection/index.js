@@ -8,7 +8,7 @@ const AboutSection = () => {
       </p>
       <div className="about-section-card-container">
         <div className="about-section-card">
-          <img src="https://www.alabamamediagroup.com/wp-content/uploads/2017/04/newcar2-1030x687.jpg" />
+          <img src="https://www.alabamamediagroup.com/wp-content/uploads/2017/04/newcar2-1030x687.jpg" alt=""/>
           <div>
             <h3>CITY TAXI</h3>
             <p>
@@ -21,7 +21,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="about-section-card">
-          <img src="https://www.credit.com/wp-content/uploads/2016/10/car-loans-612x281.jpg" />
+          <img src="https://www.credit.com/wp-content/uploads/2016/10/car-loans-612x281.jpg" alt=""/>
           <div>
             <h3>OUTSTATION</h3>
             <p>
@@ -34,7 +34,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="about-section-card">
-          <img src="https://www.magnifymoney.com/mmassets/uploads/2016/07/iStock_84439397_MEDIUM-e1468909231318-1-e1469425068437.jpg" />
+          <img src="https://www.magnifymoney.com/mmassets/uploads/2016/07/iStock_84439397_MEDIUM-e1468909231318-1-e1469425068437.jpg" alt="" />
           <div>
             <h3>RENTALS</h3>
             <p>

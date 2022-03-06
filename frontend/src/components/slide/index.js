@@ -10,7 +10,7 @@ const Slide = () => {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <div className="slide-items">
-            <img src="https://www.olacabs.com/webstatic/img/fleet-image/micro.png" />
+            <img src="https://www.olacabs.com/webstatic/img/fleet-image/micro.png" alt=""/>
             <div>
               <h1 className="d-block w-100">Micro</h1>
               <h3>Small fairs for small rides</h3>
@@ -24,7 +24,7 @@ const Slide = () => {
         </div>
         <div className="carousel-item ">
           <div className="slide-items">
-            <img src="https://www.olacabs.com/webstatic/img/fleet-image/share.png" />
+            <img src="https://www.olacabs.com/webstatic/img/fleet-image/share.png" alt=""/>
             <div>
               <h1>Share</h1>
               <h3>Eco Friendly rides at pocket-friendly rates</h3>
@@ -37,7 +37,7 @@ const Slide = () => {
         </div>
         <div className="carousel-item">
           <div className="slide-items">
-            <img src="https://www.olacabs.com/webstatic/img/fleet-image/prime-sedan.png" />
+            <img src="https://www.olacabs.com/webstatic/img/fleet-image/prime-sedan.png" alt=""/>
             <div>
               <h1>Prime Sedan</h1>
               <h3>Sedans with free wifi and Top Drivers</h3>
