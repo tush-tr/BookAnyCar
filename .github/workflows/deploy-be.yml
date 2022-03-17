@@ -46,6 +46,6 @@ jobs:
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           appdir: ./backend
-          env:
-            MONGO_ADMIN: ${{ secrets.MONGO_ADMIN }}
-            MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
+        env:
+          MONGO_ADMIN: ${{ secrets.MONGO_ADMIN }}
+          MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
