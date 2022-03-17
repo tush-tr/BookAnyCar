@@ -1,0 +1,51 @@
+name: API Deploy 
+on:
+  push:
+    branches:
+      - "dev"
+
+env:
+  MONGO_ADMIN: ${{ secrets.MONGO_ADMIN }}
+  MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install
+      run: npm ci
+      working-directory: ./backend
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v1
+      - run: ls
+      - name: Connect DB
+        run: |-
+          cd ./backend
+          ls
+          touch .env
+          echo "MONGO_ADMIN=$MONGO_ADMIN" >> .env
+          echo "MONGO_PASSWORD=$MONGOURL" >> .env
+          cat .env
+      - run: ls
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
+          appdir: ./backend
+          env:
+            MONGO_ADMIN: ${{ secrets.MONGO_ADMIN }}
+            MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
