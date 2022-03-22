@@ -25,6 +25,7 @@
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "dotenv": "^16.0.0",
+    "dropbox-v2-api": "^2.5.0",
     "express": "^4.17.3",
     "express-formidable": "^1.2.0",
     "express-session": "^1.17.2",
