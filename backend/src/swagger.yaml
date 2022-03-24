@@ -1,0 +1,113 @@
+openapi: 3.0.0
+info:
+  title: Book Any Car
+  description: Book Any Car apis docs
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3000/api/v1
+    description: Local development server
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+    BearerAuth:
+      type: http
+      scheme: bearer
+
+
+
+
+paths:
+  /cars:
+    get:
+      summary: get all plans
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+          description: number of page(start from 0)
+          required: false
+        - name: size
+          in: query
+          schema:
+            type: integer
+          description: number of plans on one page
+          required: false
+        - name: carname
+          in: query
+          schema:
+            type: string
+          description: filter by carname
+          required: false
+      responses:
+        '200':
+          description: A json array of plans
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalPlans:
+                    type: number 
+                  plans:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        _id:
+                          type: string
+                        car:
+                          type: string
+                        model:
+                          type: string
+                        fair:
+                          type: string
+                        img:
+                          type: string
+  /car:
+    post:
+      summary: post a new car
+      requestBody:
+        description: adding a new car
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                car:
+                  type: string
+                model:
+                  type: string
+                fair:
+                  type: string
+                img:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: A json array of plans
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  _id:
+                    type: string
+                  car:
+                    type: string
+                  model:
+                    type: string
+                  fair:
+                    type: string
+                  img:
+                    type: string
+
+
+
+
+
+

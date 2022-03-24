@@ -6,10 +6,14 @@ const { resourceOptions } = require("../util/adminconfig");
 
 const express = require("express");
 const app = express();
+
 const adminJS = new AdminJS({
   databases: [],
   rootPath: "/admin",
   resources: resourceOptions,
+  // dashboard: {
+  //   component: AdminJS.bundle("./my-dashboard-component"),
+  // },
 });
 const router = AdminJSExpress.buildRouter(adminJS);
 module.exports = { router, adminJS };
