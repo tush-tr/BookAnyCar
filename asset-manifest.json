@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/BookAnyCar/static/css/main.c0b7e6fd.css",
-    "main.js": "/BookAnyCar/static/js/main.5e5310ab.js",
+    "main.css": "/BookAnyCar/static/css/main.6eed9943.css",
+    "main.js": "/BookAnyCar/static/js/main.f2d25f39.js",
     "static/js/787.27ab0589.chunk.js": "/BookAnyCar/static/js/787.27ab0589.chunk.js",
     "index.html": "/BookAnyCar/index.html",
-    "main.c0b7e6fd.css.map": "/BookAnyCar/static/css/main.c0b7e6fd.css.map",
-    "main.5e5310ab.js.map": "/BookAnyCar/static/js/main.5e5310ab.js.map",
+    "main.6eed9943.css.map": "/BookAnyCar/static/css/main.6eed9943.css.map",
+    "main.f2d25f39.js.map": "/BookAnyCar/static/js/main.f2d25f39.js.map",
     "787.27ab0589.chunk.js.map": "/BookAnyCar/static/js/787.27ab0589.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0b7e6fd.css",
-    "static/js/main.5e5310ab.js"
+    "static/css/main.6eed9943.css",
+    "static/js/main.f2d25f39.js"
   ]
 }
