@@ -1,5 +1,4 @@
 import LoginSignupPage from "../../components/auth";
-import AddCarForm from "./addcarform";
 const AddCar = () => {
   return (
     <div className="container">
