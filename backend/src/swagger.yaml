@@ -7,6 +7,8 @@ info:
 servers:
   - url: http://localhost:3000/api/v1
     description: Local development server
+  - url: https://bookanycar.herokuapp.com/api/v1/
+    description: Production Server
 
 components:
   securitySchemes:
@@ -105,9 +107,76 @@ paths:
                     type: string
                   img:
                     type: string
-
-
-
+  /user/signup:
+    post: 
+      summary: Sign up a new user
+      requestBody:
+        description: adding a new user
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user: 
+                  type: string
+                  example: rahul123
+                password:
+                  type: string
+                  example: rahul@123
+                email:
+                  type: string
+                  example: example@example.com
+                role:
+                  type: string 
+                  default: user
+                  example: user     
+      responses:
+        200: 
+          description: A json object of user data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  _id:
+                    type: string
+                  user:
+                    type: string
+                  email:
+                    type: string
+                  role:
+                    type: string
+  /user/login:
+    post:
+      summary: login user
+      requestBody:
+        description: adding a new user
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user: 
+                  type: string
+                  example: rahul123
+                password:
+                  type: string
+                  example: rahul@123
+                email:
+                  type: string
+                  example: example@example.com
+      responses:
+        200: 
+          description: A json object of user data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+      
+          
 
 
 
