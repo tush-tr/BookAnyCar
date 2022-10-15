@@ -7,16 +7,16 @@
   padding-bottom: 60px;
 }
 
-.home-intro {
+/* .home-intro {
   margin: 20px;
   color: #505056;
   background-color: #fef1f440;
   border-radius: 38px;
-}
-.home-intro > h2 {
+} */
+/* .home-intro > h2 {
   font-size: 2.6rem;
-}
-.home-section-main {
+} */
+/* .home-section-main {
   height: 400px;
   margin-bottom: 13rem;
   display: flex;
@@ -46,4 +46,4 @@
 }
 .home-section-main > div > p {
   font-size: 1.3rem;
-}
+} */

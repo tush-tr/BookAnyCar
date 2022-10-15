@@ -1,12 +1,13 @@
 import WhyCard from "./whycard";
-import "./style.css";
+import styled from "styled-components";
+
 const WhySection = () => {
   return (
-    <section className="why-section-main">
+    <Section>
       <h1>Why Book Any Car?</h1>
       <p>The best way to travel to your destination</p>
       <div className="why-section-container">
-        <div className="why-card-container">
+        <Container>
           <WhyCard
             heading="Cabs for Every Pocket"
             description="From Sedans and SUVs to Luxury cars for special occasions, we
@@ -20,8 +21,8 @@ const WhySection = () => {
                 ensure you a safe travel experience."
             imgUrl="https://cms-web.olacabs.com/00000000370.jpg"
           />
-        </div>
-        <div className="why-card-container">
+        </Container>
+        <Container>
           <WhyCard
             heading="Share and Express"
             description="To travel with the lowest fares choose Ola Share. For a faster
@@ -36,9 +37,20 @@ const WhySection = () => {
                 with our free wifi facility."
             imgUrl="https://cms-web.olacabs.com/00000000371.jpg"
           />
-        </div>
+        </Container>
       </div>
-    </section>
+    </Section>
   );
 };
+const Section = styled.section`
+  text-align: left;
+  margin-top: 20px;
+  padding: 10px;
+`;
+const Container = styled.div`
+  display: flex;
+  @media (min-width: 200px) and (max-width: 600px) {
+    flex-direction: column;
+  }
+`;
 export default WhySection;
